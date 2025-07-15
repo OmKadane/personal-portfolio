@@ -40,19 +40,22 @@ body {
     color: var(--text-color);
 }
 
-.header,
-.header.sticky {
+.header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1.2rem 4%;
+    background: transparent;
     display: flex;
     align-items: center;
     z-index: 100;
     transition: .5s;
-    background: transparent !important;
-    box-shadow: none !important;
+}
+
+.header.sticky {
+    background: var(--bg-color);
+    box-shadow: 0 .1rem 1rem var(--shadow-color);
 }
 
 .logo {
@@ -120,6 +123,16 @@ body {
 section {
     min-height: 100vh;
     padding: 10rem 7% 2rem;
+}
+
+section.projects {
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+}
+
+section.contact {
+    padding-top: 18rem;
+    padding-bottom: 20rem;
 }
 
 .home {
@@ -310,16 +323,11 @@ span {
 }
 
 .about {
-    width: 1766px;
-    height: 1206px;
-    margin: 0 auto;
-    min-height: auto;
-    padding-top: 25rem;
-    padding-bottom: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    flex-direction: row;
 }
 
 .about-img {
@@ -357,8 +365,7 @@ span {
 }
 
 .skills {
-    width: 1766px;
-    height: 1206px;
+    width: 100%;
     margin: 0 auto;
     min-height: auto;
     padding-top: 25rem;
@@ -415,8 +422,8 @@ span {
 
 .projects {
     min-height: auto;
-    padding-top: 25rem;
-    padding-bottom: 20rem;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
 }
 
 .projects h2 {
@@ -431,34 +438,19 @@ span {
 }
 
 .projects-container .projects-box {
-    width: 420px;
-    height: 280px;
-    margin: 0 auto;
-    background: #fff;
-    border-radius: 2rem;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1.5px 4px rgba(0,0,0,0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    overflow: hidden;
     position: relative;
-    transition: box-shadow 0.3s;
-}
-
-.projects-container .projects-box:hover {
-    box-shadow: 0 8px 32px rgba(0,0,0,0.14), 0 2px 8px rgba(0,0,0,0.10);
+    display: flex;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, .1);
+    overflow: hidden;
+    min-height: 250px;
 }
 
 .projects-box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 0;
-    display: block;
-    margin: 0;
     transition: .5s ease;
-    background: none;
 }
 
 .projects-box:hover img {
@@ -516,8 +508,8 @@ span {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding-top: 25rem;
-    padding-bottom: 20rem;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .contact h2 {
@@ -717,6 +709,10 @@ span {
         grid-template-columns: repeat(5, 1fr);
         gap: 2rem;
     }
+    section.contact {
+        padding-top: 6rem;
+        padding-bottom: 7rem;
+    }
 }
 
 @media (max-width: 991px) {
@@ -739,9 +735,9 @@ span {
     .home-img img {
         display: none;
     }
-    .skills .skills-icons-container {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+    .skills {
+        padding-top: 10rem;
+        padding-bottom: 8rem;
     }
     .projects .projects-container {
         grid-template-columns: repeat(2, 1fr);
@@ -904,12 +900,6 @@ span {
         transform: rotate(90deg) translate(-50%, 50%) scaleY(3);
         border-width: 23.9rem;
     }
-    .skills {
-        width: 100%;
-        height: auto;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
-    }
     .skills .skills-icons-container {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
@@ -938,16 +928,20 @@ span {
         font-size: 1.4rem;
         line-height: 1.6;
     }
+    section.contact {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
 }
 
 @media (max-width: 580px) {
-    .skills .skills-icons-container {
-        grid-template-columns: repeat(2, 1fr);
+    .skills-icons-container {
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
     .projects .projects-container {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.2rem;
     }
     .projects-container .projects-box {
         min-height: 180px;
@@ -1021,6 +1015,10 @@ span {
     .contact form {
         padding: 1.2rem 0.8rem 1rem 0.8rem;
         margin: 1.5rem auto 1rem auto;
+    }
+    section.contact {
+        padding-top: 2.5rem;
+        padding-bottom: 2rem;
     }
 }
 
@@ -1119,7 +1117,9 @@ span {
     }
 }
 
-img {
+img, .about-img img, .contact-img img {
+    max-width: 100%;
+    height: auto;
     border-radius: 20px;
 }
 
