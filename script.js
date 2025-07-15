@@ -66,9 +66,9 @@ darkModeIcon.onclick = () => {
     darkModeIcon.classList.toggle('bx-sun');
     document.body.classList.toggle('dark-mode');
     if(document.body.classList.contains('dark-mode')) {
-        logoImg.src = 'personal_logo_light.png';
-    } else {
         logoImg.src = 'personal_logo_dark.png';
+    } else {
+        logoImg.src = 'personal_logo_light.png';
     }
 };
 
