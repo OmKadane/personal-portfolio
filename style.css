@@ -38,6 +38,7 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+    transition: background 0.4s, color 0.4s;
 }
 
 .header {
@@ -500,7 +501,7 @@ span {
 
 .projects-layer a i {
     font-size: 2rem;
-    color: #333;
+    color: var(--text-color);
 }
 
 .contact {
@@ -620,7 +621,7 @@ span {
 
 .footer-iconTop a i {
     font-size: 2.4rem;
-    color: #333;
+    color: var(--text-color);
 }
 
 .social-media a {

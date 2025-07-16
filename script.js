@@ -62,15 +62,29 @@ var swiper = new Swiper(".mySwiper", {
 let darkModeIcon = document.querySelector('#darkMode-icon');
 let logoImg = document.getElementById('logo-img');
 
-darkModeIcon.onclick = () => {
-    darkModeIcon.classList.toggle('bx-sun');
-    document.body.classList.toggle('dark-mode');
-    if(document.body.classList.contains('dark-mode')) {
-        logoImg.src = 'personal_logo_dark.png';
+function setDarkMode(isDark) {
+    if (isDark) {
+        document.body.classList.add('dark-mode');
+        if (darkModeIcon) darkModeIcon.classList.add('bx-sun');
+        if (logoImg) logoImg.src = 'personal_logo_dark.png';
     } else {
-        logoImg.src = 'personal_logo_light.png';
+        document.body.classList.remove('dark-mode');
+        if (darkModeIcon) darkModeIcon.classList.remove('bx-sun');
+        if (logoImg) logoImg.src = 'personal_logo_light.png';
     }
-};
+}
+
+// Initialize mode from localStorage
+const darkModePref = localStorage.getItem('darkMode');
+setDarkMode(darkModePref === 'true');
+
+if (darkModeIcon) {
+    darkModeIcon.onclick = () => {
+        const isDark = !document.body.classList.contains('dark-mode');
+        setDarkMode(isDark);
+        localStorage.setItem('darkMode', isDark);
+    };
+}
 
 
 /*========== scroll reveal ==========*/
