@@ -46,7 +46,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.2rem 4%;
+    padding: 0.05rem 4% 0.05rem;
     background: transparent;
     display: flex;
     align-items: center;
@@ -70,7 +70,7 @@ body {
     width: 180px;
     height: 180px;
     object-fit: contain;
-    margin-left: 30px;
+    margin-left: 10px;
 }
 
 .navbar a {
@@ -79,6 +79,9 @@ body {
     color: var(--white-color);
     font-weight: 500;
     margin-right: 3.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0.5rem;
 }
 
 .header.sticky .navbar a {

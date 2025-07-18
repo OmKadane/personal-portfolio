@@ -12,6 +12,13 @@ menuIcon.onclick = () => {
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
+let header = document.querySelector('.header');
+
+function handleStickyHeader() {
+    header.classList.toggle('sticky', window.scrollY > 100);
+}
+
+// Run on scroll
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
@@ -27,18 +34,14 @@ window.onscroll = () => {
         };
     });
 
+    handleStickyHeader();
 
-/*========== sticky navbar ==========*/
-let header = document.querySelector('.header');
-
-header.classList.toggle('sticky', window.scrollY > 100);
-
-
-/*========== remove menu icon navbar when click navbar link (scroll) ==========*/
-menuIcon.classList.remove('bx-x');
-navbar.classList.remove('active');
-
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
 };
+
+// Run on page load
+handleStickyHeader();
 
 
 /*========== swiper ==========*/
