@@ -627,6 +627,10 @@ span {
     color: var(--text-color);
 }
 
+.dark-mode .footer-iconTop a i {
+    color: var(--bg-color);
+}
+
 .social-media a {
     display: inline-flex;
     justify-content: center;
