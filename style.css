@@ -828,10 +828,10 @@ span {
         background: var(--bg-color);
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-        display: none;
-    }
-    .navbar.active {
         display: block;
+    }
+    .navbar:not(.active) {
+        display: none;
     }
     .navbar a {
         display: block;
@@ -1222,4 +1222,8 @@ img, .about-img img, .contact-img img {
     transform: scaleX(-1);
     box-shadow: none;
     margin-top: 50px;
+}
+
+.dark-mode .projects-layer a i {
+    color: #111;
 }
