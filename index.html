@@ -7,19 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OmCodex-TechiFolio</title>
 
-    <!-- swiper css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-    <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- custom css -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- header design -->
     <header class="header">
         <a href="#" class="logo"><img src="personal_logo_dark.png" alt="Personal Logo" class="logo-img" id="logo-img"></a>
 
@@ -36,13 +32,12 @@
         <div class="bx bx-menu" id="menu-icon"></div>
     </header>
 
-    <!-- home section design -->
     <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, I am</h3>
             <h1><span>Om</span> Kadane</h1>
             <p>
-               Python Programmer | Aspiring FSP DEVELOPER
+                Python Programmer | Aspiring FSP DEVELOPER
             </p>
 
             <div class="social-media">
@@ -85,7 +80,6 @@
         </div>
     </section>
 
-    <!-- about section design -->
     <section class="about" id="about">
         <div class="about-img">
             <img src="about_page_img.png" alt="">
@@ -103,7 +97,6 @@
         </div>
     </section>
 
-    <!-- skills section design -->
     <section class="skills" id="skills">
         <h2 class="heading">My <span>Skills</span></h2>
         <div class="skills-icons-container">
@@ -140,7 +133,6 @@
         </div>
     </section>
 
-    <!-- projects section design -->
     <section class="projects" id="projects">
         <h2 class="heading">My <span>Projects</span></h2>
         <div class="projects-container">
@@ -183,7 +175,6 @@
         </div>
     </section>
 
-    <!-- contact section design -->
     <section class="contact" id="contact">
         <div class="contact-flex">
             <div class="contact-flex-inner">
@@ -206,7 +197,6 @@
         </div>
     </section>
 
-    <!-- footer design -->
     <footer class="footer">
         <div class="footer-text">
             <p>Made with 🤍 by Om</p>
@@ -218,52 +208,14 @@
     </footer>
 
 
-    <!-- scroll reveal -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-    <!-- custom js -->
     <script src="script.js"></script>
-<!-- Code injected by live-server -->
-<script>
-	// <![CDATA[  <-- For SVG support
-	if ('WebSocket' in window) {
-		(function () {
-			function refreshCSS() {
-				var sheets = [].slice.call(document.getElementsByTagName("link"));
-				var head = document.getElementsByTagName("head")[0];
-				for (var i = 0; i < sheets.length; ++i) {
-					var elem = sheets[i];
-					var parent = elem.parentElement || head;
-					parent.removeChild(elem);
-					var rel = elem.rel;
-					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
-						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
-						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
-					}
-					parent.appendChild(elem);
-				}
-			}
-			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
-			var address = protocol + window.location.host + window.location.pathname + '/ws';
-			var socket = new WebSocket(address);
-			socket.onmessage = function (msg) {
-				if (msg.data == 'reload') window.location.reload();
-				else if (msg.data == 'refreshcss') refreshCSS();
-			};
-			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
-				console.log('Live reload enabled.');
-				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
-			}
-		})();
-	}
-	else {
-		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
-	}
-	// ]]>
-</script>
+    
+    <script src="//code.tidio.co/lbme1qqdqribnm0183vuul2mmwjmqwus.js" async></script>
+
 </body>
 
 </html>
